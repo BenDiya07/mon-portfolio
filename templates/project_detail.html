@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.title }} | Portfolio{% endblock %}
+
+{% block content %}
+<section class="project-detail section-padding">
+    <div class="container">
+        <a href="{{ url_for('projects') }}" class="back-link">&larr; Back to Projects</a>
+
+        <header class="project-header hidden">
+            <h1 class="project-title-large">{{ project.title }}</h1>
+            <div class="project-tags-large">
+                {% for tag in project.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+        </header>
+
+        <div class="project-content hidden delay-100">
+            <div class="project-main-image">
+                <img src="{{ url_for('static', filename='images/' + project.images[0]) }}"
+                    alt="{{ project.title }} Main View">
+            </div>
+
+            <div class="project-description">
+                <h2>Overview</h2>
+                <p>{{ project.description }}</p>
+
+                <div class="project-links">
+                    {% if project.url != '#' %}
+                    <a href="{{ project.url }}" target="_blank" class="btn btn-primary">Visit Live Site</a>
+                    {% endif %}
+                    {% if project.github != '#' %}
+                    <a href="{{ project.github }}" target="_blank" class="btn btn-secondary">View Code</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if project.images|length > 1 %}
+            <div class="project-gallery-grid">
+                <h2>Project Gallery</h2>
+                <div class="gallery-grid">
+                    {% for img in project.images[1:] %}
+                    <div class="gallery-item">
+                        <img src="{{ url_for('static', filename='images/' + img) }}"
+                            alt="{{ project.title }} Screenshot" loading="lazy">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}
