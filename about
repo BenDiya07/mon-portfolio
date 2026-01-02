@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Portfolio.</a>
+            <div class="menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/"
+                            class="">Home</a></li>
+                    <li><a href="/projects"
+                            class="">Work</a></li>
+                    <li><a href="/about"
+                            class="active">About</a></li>
+                    <li><a href="/contact"
+                            class="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- About Section -->
+<section id="about" class="section-padding">
+    <div class="container">
+        <h2 class="section-title hidden">About Me</h2>
+        <div class="about-content hidden">
+            <div class="about-text">
+                <p>
+                    Hello! I’m <strong>Ben Diya</strong>, a frontend developer passionate about building
+                    clean, accessible, and user-focused web interfaces.
+                </p>
+
+                <p>
+                    My journey into web development began in 2020 through hands-on experimentation
+                    with HTML and CSS. Since then, I’ve been focused on crafting responsive,
+                    performant, and visually engaging web experiences.
+                </p>
+
+                <p>
+                    I enjoy transforming ideas and designs into functional interfaces, paying close
+                    attention to usability, accessibility, and consistency across devices.
+                </p>
+                <ul class="skills-list">
+                    <li class="skill-item">JavaScript (ES6+)</li>
+                    <li class="skill-item">TypeScript</li>
+                    <li class="skill-item">Python</li>
+                    <li class="skill-item">HTML5</li>
+                    <li class="skill-item">CSS3 / Tailwind</li>
+                    <li class="skill-item">Responsive Design</li>
+                    <li class="skill-item">Accessibility (a11y)</li>
+                    <li class="skill-item">Git & GitHub</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <!-- Placeholder text or actual image source if provided -->
+                <img src="/static/images/mypicture.jpeg" alt="Ben Diya profile picture"
+                    loading="lazy" class="about-image" />
+                <span style="color: var(--text-secondary); display: none;">[ Your Profile Picture ]</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Designed & Built by Ben Diya</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="/static/js/script.js"></script>
+</body>
+
+</html>
