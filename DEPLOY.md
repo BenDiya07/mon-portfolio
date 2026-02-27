@@ -1,20 +1,22 @@
 # Deployment Guide for GitHub Pages
 
-## 1. Verify Build
-You have successfully generated a static version of your site in the `build/` folder.
-This folder contains:
+## 1. Verify Static Files
+Your site has been converted to pure HTML/CSS/JS.
+The key files are in the root directory:
 - `index.html` (Home)
-- `about`, `projects`, `contact` (HTML files without extensions, will be handled by GitHub Pages)
-- `static/` (CSS, Images, JS)
+- `projects.html`
+- `about.html`
+- `contact.html`
+- `project-*.html` (Project details)
 
 ## 2. Push to GitHub
-If you haven't already, initialize a git repository and push your code.
+Since your site is now static, you can simply push these files to your repository.
 
 1.  **Initialize Git** (if not done):
     ```bash
     git init
     git add .
-    git commit -m "Initial commit"
+    git commit -m "Converted to static HTML site"
     ```
 
 2.  **Create a Repository on GitHub**:
@@ -35,36 +37,7 @@ If you haven't already, initialize a git repository and push your code.
 3.  Under **Build and deployment**:
     - Source: **Deploy from a branch**
     - Branch: **main**
-    - Folder: **/(root)** (We will deploy the `build` folder content to the root of a separate branch or configure it manually, but the easiest way for manual upload or simple flow is often just pushing the build folder content to a `gh-pages` branch).
+    - Folder: **/(root)**
+4.  Click **Save**.
 
-**Easiest way for you right now:**
-We can use a tool like `gh-pages` or simply push the contents of `build` to a `gh-pages` branch.
-
-**Manual Step:**
-1.  Run: `git checkout -b gh-pages`
-2.  (We need to only commit the build folder contents, but since `build` is likely ignored or mixed, the cleanest way is often a separate deploy script or using a tool).
-
-**BETTER ALTERNATIVE:**
-Since you have the source code, just let GitHub build it? No, because it uses Flask.
-
-**RECOMMENDED: Deploy the `build` folder.**
-1.  Run this command to push only the `build` folder to the `gh-pages` branch:
-    ```bash
-    git add build && git commit -m "Build site"
-    git subtree push --prefix build origin gh-pages
-    ```
-2.  Then in GitHub Pages settings, select `gh-pages` branch as source.
-
-## Summary of Commands to Run Now:
-```bash
-# 1. Add all changes
-git add .
-git commit -m "Ready for deployment"
-
-# 2. Push source code to main (optional but good)
-# git push origin main
-
-# 3. Push the build folder to gh-pages branch
-git subtree push --prefix build origin gh-pages
-```
-Then go to GitHub -> Settings -> Pages -> Source: `gh-pages` branch.
+Your site will be live at `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`.
