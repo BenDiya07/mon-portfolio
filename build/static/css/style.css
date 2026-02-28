@@ -300,7 +300,8 @@ header .container {
     border-radius: 16px;
     padding: 32px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
+    display: block;
+    /* Important for <a> tag */
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
@@ -393,37 +394,6 @@ header .container {
 .project-card:hover .project-link {
     opacity: 1;
     color: var(--accent-color);
-}
-
-.featured-project-card {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    background: var(--bg-secondary);
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    margin-bottom: 60px;
-}
-
-.featured-project-card .project-img {
-    flex: 1;
-}
-
-.featured-project-card .project-info {
-    flex: 1;
-}
-
-.pill {
-    background: rgba(59, 130, 246, 0.1);
-    color: var(--accent-color);
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    display: inline-block;
-    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 /* =========================================
@@ -571,10 +541,6 @@ footer {
 
     .nav-links.active {
         right: 0;
-    }
-
-    .featured-project-card {
-        flex-direction: column;
     }
 }
 

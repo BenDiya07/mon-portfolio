@@ -10,7 +10,7 @@ env/
 .env
 
 # Distribution / Packaging
-build/
+# build/
 develop-eggs/
 dist/
 downloads/

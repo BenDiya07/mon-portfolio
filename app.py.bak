@@ -14,16 +14,17 @@ projects_data = [
     },
     {
         'id': 'payroll-management',
+        'title': 'Payroll Management System',
         'description': 'Comprehensive academic payroll management application: employees, advances, deductions, reports, authentication, and dashboard. Designed to streamline HR processes and ensure accurate salary calculations.',
         'tags': ['HTML', 'CSS', 'JavaScript', 'Python', 'MySQL'],
         'images': ['snel-payroll1.png', 'snel-payroll2.png', 'snel-payroll3.png', 'snel-payroll4.png'],
         'github': 'https://github.com/BenDiya07/Payroll-Management-System-SNEL-Academic-Project-'
     },
     {
-        'id': 'jupython RDC',
+        'id': 'jupython-frontend',
         'title': 'Jupython Plateforme Frontend Éducative',
         'description': 'Interface frontend d’une plateforme éducative moderne comprenant des pages académiques, un catalogue de cours, un système de classement et des pages institutionnelles, avec une approche responsive et centrée utilisateur',
-        'tags': ['HTML', 'Sass', 'JavaScript', 'Responsive UI'],
+        'tags': ['HTML', 'CSS', 'JavaScript', 'Responsive UI'],
         'images': ['jupython-dashbord1.png', 'jupython-dashbord2.png', 'jupython-dashbord3.png', ],
         'github': 'https://github.com/Jupython-RDC/jupython-frontend'
     }
